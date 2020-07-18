@@ -23,7 +23,7 @@ class Transfer
   end
   
   
-   describe '#execute_transaction' do
+  describe '#execute_transaction' do
     let(:avi) { BankAccount.new("Avi") }
     let(:amanda) { BankAccount.new("Amanda") }
     let(:transfer) { Transfer.new(amanda, avi, 50) }
