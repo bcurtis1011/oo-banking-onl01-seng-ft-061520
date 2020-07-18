@@ -18,8 +18,11 @@ class Transfer
     #user 2 is going to give user 1 $50 #-> true
     # user 2 will send $4000 to user 1 #-> false
     if valid? && receiver.balance > amount && self.status == "complete"
-    
-    expect(transfer.status).to eq("complete")
+      receiver.balance -= amount
+      sender.balance += amount
+      self.status = "complete"
+    else
+      reject_tranfer
   end
   
   
