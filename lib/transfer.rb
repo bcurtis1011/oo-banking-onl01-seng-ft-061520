@@ -17,7 +17,7 @@ class Transfer
     # transfer between 2 accounts with 1000 in it
     #user 2 is going to give user 1 $50 #-> true
     # user 2 will send $4000 to user 1 #-> false
-    
+    if valid? && receiver.balance > amount && self.status == "complete"
     
     expect(transfer.status).to eq("complete")
   end
